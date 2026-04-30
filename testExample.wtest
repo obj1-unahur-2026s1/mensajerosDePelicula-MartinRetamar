@@ -1,9 +1,15 @@
-import example.pepita
+import mensajeros.*
 
-describe "group of tests for pepita" {
+describe "Test de roberto y Neo" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "Roberto peso 90 y puede llevar un paquete que esta pago en un caion que tiene acoplado" {
+    paquete.serPagado()
+    roberto.cambiaTransporte(camion)
+    assert.that(roberto.puedeLlevarPaquete(puenteBroklyn))
+  }
+
+  test "Neo no puede llevar un paquete que no está pago a la matrix." {
+    assert.notThat(neo.puedeLlevarPaquete(laMatrix))
   }
 
 }
